@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 
 import { FlipWords } from "@/components/ui/flip-words";
 import { Container } from "@/components/ui/container";
-import Link from "next/link";
 
 export default function Hero() {
   return (
