@@ -103,23 +103,35 @@ export default function About() {
   return (
     <Section>
       <div className="flex flex-col">
-        <h2 className="text-4xl font-bold text-zinc-200 text-left mt-10">
-          About me
-        </h2>
+        <h2 className="text-4xl font-bold text-zinc-200 text-left">About me</h2>
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="mt-4 sm:mt-8 lg:mb-16 mb-8 w-full lg:w-1/3">
-            <h3 className="text-2xl font-bold text-zinc-200">Tim Börner</h3>
-            <h4 className="text-lg text-zinc-200 mb-5">Software Engineer</h4>
+            <h3 className="text-2xl font-bold text-zinc-200 mb-5">
+              Tim Börner
+            </h3>
+            <div className="flex flex-col mb-5">
+              <h4 className="text-lg text-zinc-200">B.Sc. Computer Science</h4>
+              <p className="text-sm text-zinc-500">
+                University of Applied Sciences Dresden
+              </p>
+            </div>
             <p className="text-lg text-zinc-400">
-              I am a Full-stack engineer specializing in growth engineering and
-              automation. <br />
-              <br /> I have a proven track record of building scalable web
-              applications, optimizing user acquisition funnels, and
-              implementing data-driven solutions using modern web technologies
-              and AI. <br />
-              <br /> My expertise spans React, TypeScript, Node.js, and Python,
-              with a focus on creating impactful solutions that drive business
-              growth.
+              I am a <span className="text-zinc-200">Full-stack engineer</span>{" "}
+              specializing in{" "}
+              <span className="text-zinc-200">growth engineering</span>. <br />
+              <br />I have a proven track record of building scalable web
+              applications,{" "}
+              <span className="text-zinc-200">
+                optimizing user acquisition funnels
+              </span>
+              , and implementing data-driven solutions using modern web
+              technologies and AI. <br />
+              <br />
+              My expertise spans <span className="text-zinc-200">
+                React
+              </span>, <span className="text-zinc-200">TypeScript</span>, and{" "}
+              <span className="text-zinc-200">Node.js</span>, with a focus on
+              creating impactful solutions that drive business growth.
             </p>
           </div>
           <div className="w-full lg:w-2/3">

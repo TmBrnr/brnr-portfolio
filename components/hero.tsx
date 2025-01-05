@@ -1,5 +1,6 @@
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { Button } from "@/components/ui/button";
+
 import { FlipWords } from "@/components/ui/flip-words";
 import { Container } from "@/components/ui/container";
 import Link from "next/link";
@@ -17,11 +18,7 @@ export default function Hero() {
               className=" font-semibold text-white text-nowrap lg:text-3xl text-2xl"
             />
           </div>
-          <HoverBorderGradient className="w-full">
-            <Link href="/about" className="text-white/80">
-              Contact me
-            </Link>
-          </HoverBorderGradient>
+          <Button href="#contact">Contact me</Button>
         </div>
       </Container>
     </AuroraBackground>
