@@ -11,7 +11,7 @@ export default function Hero() {
       <Container>
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-8xl font-bold text-white">Brnr</h1>
-          <div className="lg:text-3xl text-2xl text-white/80 flex items-center">
+          <div className="lg:text-3xl text-nowrap text-xl text-white/80 flex items-center">
             People call me
             <FlipWords
               words={["Developer", "Growth Hacker", "AI Enthusiast"]}

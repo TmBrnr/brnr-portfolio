@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import Section from "@/components/ui/section";
+import Link from "next/link";
+
 const cardData = [
   {
     title: "2024-present",
@@ -115,7 +117,7 @@ export default function About() {
                 University of Applied Sciences Dresden
               </p>
             </div>
-            <p className="text-lg text-zinc-400">
+            <p className="text-lg text-zinc-400 mb-5">
               I am a <span className="text-zinc-200">Full-stack engineer</span>{" "}
               specializing in{" "}
               <span className="text-zinc-200">growth engineering</span>. <br />
@@ -133,6 +135,14 @@ export default function About() {
               <span className="text-zinc-200">Node.js</span>, with a focus on
               creating impactful solutions that drive business growth.
             </p>
+            <Link
+              href="https://www.linkedin.com/in/tmbrnr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
+            >
+              Connect with me on LinkedIn →
+            </Link>
           </div>
           <div className="w-full lg:w-2/3">
             <h3 className="lg:hidden text-2xl font-bold text-zinc-200 mb-10">

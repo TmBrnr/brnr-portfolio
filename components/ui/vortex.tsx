@@ -30,7 +30,7 @@ export const Vortex = (props: VortexProps) => {
   const baseTTL = 50;
   const rangeTTL = 150;
   const baseSpeed = props.baseSpeed || 0.0;
-  const rangeSpeed = props.rangeSpeed || 1.5;
+  const rangeSpeed = props.rangeSpeed || 1;
   const baseRadius = props.baseRadius || 1;
   const rangeRadius = props.rangeRadius || 2;
   const baseHue = props.baseHue || 230;
@@ -175,7 +175,7 @@ export const Vortex = (props: VortexProps) => {
     ctx.save();
     ctx.lineCap = "round";
     ctx.lineWidth = radius;
-    ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+    ctx.strokeStyle = `hsla(${hue},85%,70%,${fadeInOut(life, ttl)})`;
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x2, y2);
@@ -230,32 +230,19 @@ export const Vortex = (props: VortexProps) => {
 
   useEffect(() => {
     setup();
-
-    const handleResize = () => {
+    window.addEventListener("resize", () => {
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (canvas && ctx) {
         resize(canvas, ctx);
       }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
-    if (canvas && ctx) {
-      draw(canvas, ctx);
-    }
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    });
   }, []);
 
   return (
     <div className={cn("relative h-full w-full", props.containerClassName)}>
       <motion.div
-        initial={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         ref={containerRef}
         className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
