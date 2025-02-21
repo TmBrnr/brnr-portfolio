@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/react";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -39,6 +40,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <JsonLd />
+        <Analytics />
       </head>
       <body
         className={`${instrumentSerif.variable} ${interDisplay.variable} antialiased bg-zinc-900`}
