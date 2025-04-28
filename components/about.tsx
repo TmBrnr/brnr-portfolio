@@ -4,7 +4,25 @@ import Link from "next/link";
 
 const cardData = [
   {
-    title: "2024-present",
+  title: "Apr 2025 - present", 
+  content: (
+    <div className="prose prose-sm dark:prose-invert">
+      <h4 className="text-lg font-bold">
+        Solutions Consultant <span className="text-zinc-500">·</span>{" "}
+        Braze
+      </h4>
+      <ul className="list-disc pl-4 mt-2 text-zinc-700 dark:text-zinc-400">
+        <li>Deliver technical demonstrations (Demos) and Proof of Concepts (PoCs)</li>
+        <li>Respond to Requests for Proposals (RFPs) with tailored solutions</li>
+        <li>Engage in creative solutioning to meet prospective client needs</li>
+        <li>Part of the EMEA presales process</li>
+      </ul>
+    </div>
+  ),
+  skills: ["Presales", "Solution Architecture", "Technical Demos", "PoC", "RFP", "Braze Platform", "Customer Engagement"], // Added skills
+},
+  {
+    title: "2024- Apr 2025",
     content: (
       <div className="prose prose-sm dark:prose-invert">
         <h4 className="text-lg font-bold">
